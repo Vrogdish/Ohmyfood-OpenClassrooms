@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 63px;
+}
+
+/*# sourceMappingURL=style.css.map */

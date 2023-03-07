@@ -1,0 +1,11 @@
+{
+  "name": "site_ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet n°4 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/style.css"
+  },
+  "author": "Cedric",
+  "license": "ISC"
+}
