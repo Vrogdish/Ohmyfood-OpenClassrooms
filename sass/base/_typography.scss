@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.location {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.btn , .function-menu {
+    font-weight: 500;
+    font-size: 16px;    
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.card-subtitle {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.badge-new  {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer {
+    font-weight: 400;
+    font-size: 16px;
+    
+    & h2 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    & h3 {
+        font-weight: 500;
+    }
+
+}

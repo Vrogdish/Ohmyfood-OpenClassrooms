@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 25px 33px 25px ;
+    color: white;
+    background: $color-footer;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+}
