@@ -98,10 +98,20 @@ footer {
   color: white;
   background: #353535;
 }
+footer a {
+  color: white;
+}
+footer i {
+  width: 20px;
+}
 footer ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+footer ul li {
+  display: flex;
+  gap: 10px;
 }
 
 .location {
@@ -165,6 +175,7 @@ footer ul {
   bottom: 0;
   left: 0;
   background: linear-gradient(200.64deg, #ae80e5 -5.2%, #fface8 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transform: matrix(1, 0, 0, -1, 0, 0);
   opacity: 0;
   z-index: -1;
@@ -184,6 +195,9 @@ footer ul {
   width: 80%;
   z-index: 0;
 }
+.btn-large i {
+  color: #7e7e7e;
+}
 .btn-large:hover::after {
   opacity: 1;
 }
@@ -199,13 +213,10 @@ footer ul {
   bottom: 0;
   left: 0;
   background: #e4d5f6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   opacity: 0;
   z-index: -1;
   transition: opacity 400ms;
-}
-
-.btn-large i {
-  color: #7e7e7e;
 }
 
 .list-nbr {
@@ -220,8 +231,34 @@ footer ul {
   border-radius: 50%;
 }
 
-.card-text {
-  padding: 12px;
+.btn_heart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: none;
+  background: none;
+  font-size: 22px;
+  margin: auto;
+}
+.btn_heart:hover .fa-solid {
+  opacity: 1;
+  transform: scale(1);
+}
+.btn_heart:hover .fa-regular {
+  opacity: 0;
+}
+.btn_heart .fa-regular {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.btn_heart .fa-solid {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  opacity: 0;
+  z-index: 1;
+  color: #ae80e5;
+  transform: scale(0.5);
+  transition: opacity 300ms ease-in-out, transform 500ms ease-in-out 50ms;
 }
 
 .card {
@@ -232,9 +269,11 @@ footer ul {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.card img {
+.card-image {
   grid-column: 1/4;
   grid-row: 1/3;
+}
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -244,19 +283,13 @@ footer ul {
   margin: auto 0;
   grid-column: 1/3;
   grid-row: 3/4;
-}
-.card .badge-new {
-  margin: auto;
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-.card .badge-heart {
-  margin: auto;
-  grid-column: 3/4;
-  grid-row: 3/4;
+  padding: 12px;
 }
 
 .badge-new {
+  margin: auto;
+  grid-column: 3/4;
+  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,29 +299,6 @@ footer ul {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   color: #278870;
-}
-.badge-heart label {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-.badge-heart input {
-  display: none;
-}
-.badge-heart input:checked + label .fa-solid {
-  opacity: 1;
-}
-.badge-heart .fa-regular {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin: 0;
-}
-.badge-heart .fa-solid {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  opacity: 0;
-  z-index: 1;
-  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */

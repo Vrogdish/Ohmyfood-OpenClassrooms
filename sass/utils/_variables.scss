@@ -6,3 +6,5 @@ $color-bg-dark:#eaeaea;
 $color-footer:#353535;
 $gradient-color : linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 $gradient-color-light : linear-gradient(200.64deg, lighten(#9356DC, 10) -5.2%, lighten(#FF79DA,10) 110.74%);
+$shadow-normal:  0px 4px 10px rgba(0, 0, 0, 0.25);
+$shadow-dark: 0px 4px 10px darken(rgba(0, 0, 0, 0.25),20%);
