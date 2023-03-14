@@ -20,22 +20,32 @@
 }
 
 .function {
-    gap: 25px;
-
-
-    &-menu {
+    
+        &_menu {
         display: flex;
         flex-direction: column;
         gap: 25px;
 
-        & li {
-            display: flex;
-            align-items: center;
         }
+
+        
     }
-}
+
 
 .content {
     gap: 20px;
     background-color: $color-bg-light;
+}
+
+.cards_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.btn_heart {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+ 
 }

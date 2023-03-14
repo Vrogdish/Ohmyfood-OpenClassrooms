@@ -6,6 +6,50 @@
 @import "./layouts/article";
 @import "./layouts/footer";
 @import "./pages/index";
+@import "./pages/menu";
 @import "./components/buttons";
 @import "./components/cards";
 @import "./components/badges";
+@import "./components/labels";
+
+
+
+    
+@media (min-width:1200px) {
+
+
+    article {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .function_menu {
+        flex-direction: row;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+     
+      }
+
+    .btn-large {
+        min-width: 250px;
+        max-width: 500px;
+    }
+
+    .cards_list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+        gap: 60px;
+
+        & ul {
+            flex-direction: row;
+            align-items: center;
+           gap: 40px;
+        }
+    }
+
+}
+

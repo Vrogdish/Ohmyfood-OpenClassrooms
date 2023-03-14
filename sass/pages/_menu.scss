@@ -1,0 +1,31 @@
+.logo i {
+    position: absolute;
+    left: 30px;
+    top:25px;
+}
+
+.menu {
+    position: relative;
+    bottom: 50px;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $color-bg-light;
+    border-radius: 40px 40px 0px 0px;
+    &_image {
+         height: 275px;
+         width: 100%;
+         object-fit: cover;
+    }
+
+    &_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .btn_heart {
+            margin-right: 30px;
+        }
+    }
+}

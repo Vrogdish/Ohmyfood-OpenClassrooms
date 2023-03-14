@@ -4,7 +4,7 @@ body {
     font-size: 18px;
 }
 
-h1 {
+h1, .menu_title h2 {
     font-family: 'Shrikhand', cursive;
     margin: 0;
     font-size: 30px;
@@ -22,22 +22,22 @@ h2 {
     line-height: 28px;
 }
 
-.btn , .function-menu {
+.btn , .function_menu {
     font-weight: 500;
     font-size: 16px;    
 }
 
-.card-title {
+.card_title {
     font-weight: 700;
     font-size: 18px;
 }
 
-.card-subtitle {
+.card_subtitle {
     font-weight: 300;
     font-size: 17px;
 }
 
-.badge-new  {
+.badge_new  {
     font-weight: 500;
     font-size: 14px;
 }
@@ -56,4 +56,26 @@ footer {
         font-weight: 500;
     }
 
+}
+
+.menu_subtitle {
+    font-size: 16px;
+    font-weight: 300px;
+}
+
+.menu_label{
+    & h2 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    & p {
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    & .price {
+        font-size: 15px;
+        font-weight: 700;
+    }
 }

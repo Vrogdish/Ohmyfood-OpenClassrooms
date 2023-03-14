@@ -7,7 +7,7 @@
   border-radius: 15px;
 
 
-  &-image {
+  &_image {
     grid-column: 1 / 4;
     grid-row: 1 / 3;
 
@@ -19,7 +19,7 @@
     }
   }
 
-  &-text {
+  &_text {
     margin: auto 0;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
@@ -28,7 +28,7 @@
 
 }
 
-.badge-new {
+.badge_new {
   margin: auto;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
