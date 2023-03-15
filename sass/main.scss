@@ -51,5 +51,26 @@
         }
     }
 
+    .menu {
+        margin: auto;
+        margin-bottom: -80px;
+        width: 635px;
+        padding-left: 210px;
+        padding-right: 210px;
+        bottom:80px;
+
+        &_title {
+            justify-content: center;
+            gap: 30px;
+        }
+
+        &_image{
+            height: 450px;
+        }
+    
+    }
+
 }
+
+
 

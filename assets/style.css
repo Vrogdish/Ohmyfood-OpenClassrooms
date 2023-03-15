@@ -87,7 +87,7 @@ footer h3 {
   font-size: 15px;
   font-weight: 300;
 }
-.menu_label .price {
+.menu_label_price {
   font-size: 15px;
   font-weight: 700;
 }
@@ -183,12 +183,13 @@ footer ul li {
 .menu {
   position: relative;
   bottom: 50px;
-  padding: 0px 30px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   background-color: #f7f7f7;
   border-radius: 40px 40px 0px 0px;
+  margin-bottom: -50px;
 }
 .menu_image {
   height: 275px;
@@ -196,12 +197,16 @@ footer ul li {
   object-fit: cover;
 }
 .menu_title {
+  padding: 40px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .menu_title .btn_heart {
-  margin-right: 30px;
+  margin: 0;
+}
+.menu .btn {
+  margin: 20px auto;
 }
 
 .btn {
@@ -366,12 +371,44 @@ footer ul li {
 
 .menu_label {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
   box-shadow: 0px 4.01149px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   background-color: white;
+  overflow: hidden;
+}
+.menu_label :hover + .menu_label_check {
+  transform: translate(0);
+}
+.menu_label :hover .menu_label_price {
+  transform: translate(0);
+}
+.menu_label_text {
+  width: 100%;
+  padding: 10px;
+}
+.menu_label p {
+  padding-right: 20px;
+}
+.menu_label_check {
+  display: flex;
+  width: 60px;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  transform: translate(102%);
+  transition: transform 500ms ease-in-out;
+}
+.menu_label_check i {
+  margin: auto;
+  color: white;
+}
+.menu_label_text-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.menu_label_text-bottom .menu_label_price {
+  padding-right: 20px;
+  transform: translate(60px);
+  transition: transform 500ms ease-in-out 50ms;
 }
 
 @media (min-width: 1200px) {
@@ -398,6 +435,21 @@ footer ul li {
     flex-direction: row;
     align-items: center;
     gap: 40px;
+  }
+  .menu {
+    margin: auto;
+    margin-bottom: -80px;
+    width: 635px;
+    padding-left: 210px;
+    padding-right: 210px;
+    bottom: 80px;
+  }
+  .menu_title {
+    justify-content: center;
+    gap: 30px;
+  }
+  .menu_image {
+    height: 450px;
   }
 }
 
