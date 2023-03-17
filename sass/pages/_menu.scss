@@ -26,14 +26,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1;
 
         & .btn_heart {
             margin: 0;
         }
     }
 
+    &_subtitle {
+        width: 40px;
+        border-bottom: solid $color-tertiary;
+    }
+
     & .btn {
-        margin: 20px auto;
+       margin: 20px auto;
+     
+
+    }
+
+    & input {
+        display: none;
     }
 }
 
