@@ -1,42 +1,81 @@
+
 .loader {
-    display:flex;
-    visibility: hidden;
-    flex-direction:column;
-    align-items:center;
-    gap:50px;
-    position:absolute;
-    width:100%;
-    height:100%;
-    backdrop-filter:blur(10px) grayscale(70%);
-    font-size:30px;
-    font-weight:900;
-    text-align:center;
-    z-index: 10;
-    animation: loading 3s;
-    animation-iteration-count:1;
+  display: grid;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10;
+  color: black;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  animation: loading 4s both;
+  
 
-
-&_object {
+  &_object-1 {
+    grid-row : 1;
+    grid-column:1;
+    margin:auto;
+    width: 120px;
+    height: 120px;
+    border: solid 4px transparent;
+    border-top: solid 4px #99E2D0;
+    opacity: 80%;
+    border-radius: 50%;
+    animation: rotation 1.5s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
+  }
+  
+  &_object-2 {
+    grid-row : 1;
+    grid-column:1;
     width:100px;
     height:100px;
-    border : solid 30px white;
-    border-top: solid 30px #9356DC;
-    opacity:60%;
-    margin-top: 200px;
-    border-radius:50%;
-    animation:  rotation 1.5s cubic-bezier(.5,.3,.5,.7) infinite;
- 
+    margin:auto;
+    border: solid 4px transparent;
+    border-top: solid 4px #9356dc;
+    opacity: 80%;
+    border-radius: 50%;
+    animation: rotation 1s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
   }
-
-& p {
-    opacity: 60%;
-}
   
+  &_object-3{
+    grid-row : 1;
+    grid-column:1;
+    width:80px;
+    height:80px;
+    margin:auto;
+    border: solid 4px transparent;
+    border-top: solid 4px #008766;
+    opacity: 80%;
+    border-radius: 50%;
+    animation: rotation 0.8s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
+  }
+  
+  & .pourcent {
+    grid-row : 1;
+    grid-column:1;
+    align-self: center;
+    font-size:18px;
+    text-align:center;
+    opacity:50%;
+  }
+  
+  
+  &_text {
+    font-size:22px;
+    opacity:50%;
+  }
 }
 
 @keyframes rotation {
-  from  { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes loading {

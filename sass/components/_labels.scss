@@ -37,6 +37,7 @@
   
     & p {
       padding: 0 0 10px 20px;
+      margin-right: 40px;
       grid-column: 1/2;
       grid-row: 2/3;
       padding-right: 25px;
@@ -50,7 +51,7 @@
       padding-right: 20px;
       grid-column: 2 / 3;
       grid-row: 2/ 3;
-      transition: transform 300ms ease-in-out 30ms;
+      transition: transform 400ms ease-in-out 30ms;
     }
   
     &_check {
@@ -63,7 +64,7 @@
       background-color: $color-tertiary;
       border-radius: 0 15px 15px 0;
       transform: translate(100%);
-      transition: transform 300ms ease-in-out;
+      transition: transform 400ms ease-in-out;
       & i {
         margin: auto;
         color: white;

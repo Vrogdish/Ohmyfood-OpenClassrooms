@@ -334,7 +334,10 @@ footer ul li {
   grid-row: 1/3;
   opacity: 0;
   z-index: 1;
-  color: #ae80e5;
+  background: linear-gradient(200.64deg, #ae80e5 -5.2%, #fface8 110.74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   transform: scale(0.5);
   transition: opacity 300ms ease-in-out, transform 500ms ease-in-out 50ms;
 }
@@ -413,6 +416,7 @@ footer ul li {
 }
 .menu_label p {
   padding: 0 0 10px 20px;
+  margin-right: 40px;
   grid-column: 1/2;
   grid-row: 2/3;
   padding-right: 25px;
@@ -425,7 +429,7 @@ footer ul li {
   padding-right: 20px;
   grid-column: 2/3;
   grid-row: 2/3;
-  transition: transform 300ms ease-in-out 30ms;
+  transition: transform 400ms ease-in-out 30ms;
 }
 .menu_label_check {
   margin-left: auto;
@@ -436,7 +440,7 @@ footer ul li {
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   transform: translate(100%);
-  transition: transform 300ms ease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 .menu_label_check i {
   margin: auto;
@@ -457,34 +461,66 @@ input[type=checkbox] {
 }
 
 .loader {
-  display: flex;
-  visibility: hidden;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  display: grid;
   position: absolute;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(10px) grayscale(70%);
-  font-size: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 10;
+  color: black;
+  font-size: 50px;
   font-weight: 900;
   text-align: center;
-  z-index: 10;
-  animation: loading 3s;
-  animation-iteration-count: 1;
+  animation: loading 4s both;
 }
-.loader_object {
-  width: 100px;
-  height: 100px;
-  border: solid 30px white;
-  border-top: solid 30px #9356DC;
-  opacity: 60%;
-  margin-top: 200px;
+.loader_object-1 {
+  grid-row: 1;
+  grid-column: 1;
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  border: solid 4px transparent;
+  border-top: solid 4px #99E2D0;
+  opacity: 80%;
   border-radius: 50%;
   animation: rotation 1.5s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
 }
-.loader p {
-  opacity: 60%;
+.loader_object-2 {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: solid 4px transparent;
+  border-top: solid 4px #9356dc;
+  opacity: 80%;
+  border-radius: 50%;
+  animation: rotation 1s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
+}
+.loader_object-3 {
+  grid-row: 1;
+  grid-column: 1;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border: solid 4px transparent;
+  border-top: solid 4px #008766;
+  opacity: 80%;
+  border-radius: 50%;
+  animation: rotation 0.8s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
+}
+.loader .pourcent {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  font-size: 18px;
+  text-align: center;
+  opacity: 50%;
+}
+.loader_text {
+  font-size: 22px;
+  opacity: 50%;
 }
 
 @keyframes rotation {
@@ -506,25 +542,60 @@ input[type=checkbox] {
 .menu {
   overflow: hidden;
 }
-.menu::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #f7f7f7;
-  opacity: 1;
-  transform: translate(0, 100%);
-  animation: show 8s;
+
+.slide--1 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 100ms;
+}
+.slide--2 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 200ms;
+}
+.slide--3 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 300ms;
+}
+.slide--4 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 400ms;
+}
+.slide--5 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 500ms;
+}
+.slide--6 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 600ms;
+}
+.slide--7 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 700ms;
+}
+.slide--8 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 800ms;
+}
+.slide--9 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 900ms;
+}
+.slide--10 {
+  animation: slide 1s ease-in-out both;
+  animation-delay: 1000ms;
 }
 
-@keyframes show {
+@keyframes slide {
   from {
-    transform: translate(0, 0);
+    transform: translate(150%) scale(1.1);
+  }
+  60% {
+    transform: translate(-15px) scale(1.1);
+  }
+  80% {
+    transform: translate(0) scale(1.1);
   }
   to {
-    transform: translate(0, 100%);
+    transform: translate(0) scale(1);
   }
 }
 @media (min-width: 1200px) {

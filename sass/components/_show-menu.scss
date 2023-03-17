@@ -1,26 +1,33 @@
+$nbr_slides:10;
+
 .menu {
     overflow: hidden;
+}
 
-    &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: $color-bg-light;
-        opacity: 1;
-        transform: translate(0, 100%);
-        animation: show 8s ;
+.slide{
+    @for $i from 1 through $nbr_slides {
+        &--#{$i} {
+            animation: slide 1s ease-in-out both;
+            animation-delay: 100ms * $i;
+        }
     }
 }
 
-@keyframes show {
+
+@keyframes slide {
     from {
-        transform: translate(0, 0)
+        transform: translate(150%) scale(1.1)
+    }
+
+    60% {
+        transform: translate(-15px) scale(1.1)
+    }
+
+    80% {
+        transform: translate(0) scale(1.1)
     }
 
     to {
-        transform: translate(0, 100%)
+        transform: translate(0) scale(1)
     }
 }
