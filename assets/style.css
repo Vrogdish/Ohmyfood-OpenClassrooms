@@ -481,7 +481,7 @@ input[type=checkbox] {
   width: 120px;
   height: 120px;
   border: solid 4px transparent;
-  border-top: solid 4px #99E2D0;
+  border-top: solid 4px #99e2d0;
   opacity: 80%;
   border-radius: 50%;
   animation: rotation 1.5s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
@@ -489,9 +489,9 @@ input[type=checkbox] {
 .loader_object-2 {
   grid-row: 1;
   grid-column: 1;
+  margin: auto;
   width: 100px;
   height: 100px;
-  margin: auto;
   border: solid 4px transparent;
   border-top: solid 4px #9356dc;
   opacity: 80%;
@@ -501,26 +501,48 @@ input[type=checkbox] {
 .loader_object-3 {
   grid-row: 1;
   grid-column: 1;
+  margin: auto;
   width: 80px;
   height: 80px;
-  margin: auto;
   border: solid 4px transparent;
-  border-top: solid 4px #008766;
+  border-top: solid 4px #ff79da;
   opacity: 80%;
   border-radius: 50%;
   animation: rotation 0.8s cubic-bezier(0.5, 0.3, 0.5, 0.7) infinite;
 }
-.loader .pourcent {
+.loader_counter {
+  align-self: center;
   grid-row: 1;
   grid-column: 1;
-  align-self: center;
-  font-size: 18px;
   text-align: center;
   opacity: 50%;
+  font-size: 18px;
+  color: black;
+  opacity: 70%;
+}
+.loader_counter::after {
+  content: "0%";
+  animation: counter 3s linear both;
 }
 .loader_text {
+  display: flex;
+  margin: auto;
+  margin-top: 0;
+  font-family: shrikhand;
   font-size: 22px;
-  opacity: 50%;
+  opacity: 70%;
+}
+
+.p1 {
+  animation: jump 1s ease-in-out infinite;
+}
+
+.p2 {
+  animation: jump 1s ease-in-out infinite 80ms;
+}
+
+.p3 {
+  animation: jump 1s ease-in-out infinite 160ms;
 }
 
 @keyframes rotation {
@@ -537,6 +559,61 @@ input[type=checkbox] {
   }
   to {
     visibility: hidden;
+  }
+}
+@keyframes counter {
+  from {
+    content: "1%";
+  }
+  10% {
+    content: "10%";
+  }
+  20% {
+    content: "20%";
+  }
+  30% {
+    content: "25%";
+  }
+  40% {
+    content: "40%";
+  }
+  50% {
+    content: "40%";
+  }
+  60% {
+    content: "60%";
+  }
+  70% {
+    content: "75%";
+  }
+  80% {
+    content: "80%";
+  }
+  90% {
+    content: "90%";
+  }
+  to {
+    content: "100%";
+  }
+}
+@keyframes jump {
+  from {
+    transform: translate(0, 0);
+  }
+  40% {
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(0, -10px);
+  }
+  80% {
+    transform: translate(0, 0);
+  }
+  90% {
+    transform: translate(0, -4px);
+  }
+  to {
+    transform: translate(0, 0);
   }
 }
 .menu {

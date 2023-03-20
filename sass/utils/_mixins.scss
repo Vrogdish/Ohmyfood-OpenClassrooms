@@ -6,3 +6,16 @@
     bottom: 0;
     left: 0;
 }
+
+
+@mixin circle($circle-size, $circle-color) {
+    grid-row: 1;
+    grid-column: 1;
+    margin: auto;
+    width: $circle-size;
+    height: $circle-size;
+    border: solid 4px transparent;
+    border-top: solid 4px $circle-color;
+    opacity: 80%;
+    border-radius: 50%;
+  }
