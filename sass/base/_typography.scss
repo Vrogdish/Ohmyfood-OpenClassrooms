@@ -1,17 +1,19 @@
-body {
+* {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
 }
 
-h1, .menu_title h2 {
+
+
+h1, .menu_title h2 , .loader_text p {
     font-family: 'Shrikhand', cursive;
     margin: 0;
     font-size: 30px;
     font-weight: 400;
 }
 
-.location {
+.location p {
     font-weight: 500;
     font-size: 16px;
 }
@@ -22,7 +24,12 @@ h2 {
     line-height: 28px;
 }
 
-.btn , .function_menu {
+.btn-large p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.function_menu {
     font-weight: 500;
     font-size: 16px;    
 }
@@ -37,10 +44,15 @@ h2 {
     font-size: 17px;
 }
 
-.badge_new  {
+.badge_new p {
     font-weight: 500;
     font-size: 14px;
 }
+
+.btn_heart i {
+    font-size: 21px;
+}
+
 
 footer {
     font-weight: 400;
@@ -54,6 +66,12 @@ footer {
 
     & h3 {
         font-weight: 500;
+        font-size: 16px;
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: 16px;
     }
 
 }

@@ -7,8 +7,6 @@
   -webkit-backdrop-filter: blur(20px);
   z-index: 10;
   color: black;
-  font-size: 50px;
-  font-weight: 900;
   text-align: center;
   animation: loading 4s both;
 
@@ -49,8 +47,6 @@
     display:flex;
     margin:auto;
     margin-top: 0;
-    font-family: shrikhand;
-    font-size: 22px;
     opacity: 70%;
   }
 }
