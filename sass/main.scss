@@ -3,7 +3,6 @@
 @import "./base/typography";
 @import "./base/base";
 @import "./layouts/header";
-@import "./layouts/article";
 @import "./layouts/footer";
 @import "./pages/index";
 @import "./pages/menu";
@@ -19,16 +18,14 @@
 @media (min-width:1200px) {
 
 
-    article {
-        padding-left: 5%;
-        padding-right: 5%;
+    section {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .function_menu {
         flex-direction: row;
-        // justify-content: space-between;
-        // flex-wrap: wrap;
-     
+    
       }
 
     .btn-large {
@@ -37,8 +34,17 @@
     }
 
     .cards_list {
+        gap: 50px;
+    }
+
+    .cards_list_part {
         flex-direction: row;
         justify-content: space-between;
+        gap: 10%;
+    }
+
+    .card {
+        width: 100%;
     }
 
     footer {
